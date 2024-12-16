@@ -17,4 +17,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  build: {
+    outDir: 'docs', // 这里将输出目录修改为 'docs'，你可以根据实际部署需求调整为合适的目录名称
+    emptyOutDir: true, // 构建前清空输出目录，确保每次构建都是全新的内容
+  }
 })
