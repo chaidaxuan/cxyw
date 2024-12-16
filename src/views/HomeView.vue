@@ -64,12 +64,7 @@
   <div style="margin-top: 5px; border: 1px 0px 1px 0px; border-color: aliceblue">
     <el-row class="tac">
       <el-col :span="6">
-        <el-menu
-          default-active="2"
-          class="el-menu-vertical-demo"
-          @open="handleOpen"
-          @close="handleClose"
-        >
+        <el-menu default-active="2" class="el-menu-vertical-demo">
           <el-sub-menu index="1">
             <template #title style="margin-left: -50px">
               <el-icon><location /></el-icon>
