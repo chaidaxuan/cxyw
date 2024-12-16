@@ -13,11 +13,13 @@ export default defineConfig({
     vueJsx(),
     vueDevTools(),
   ],
-  base: './',
+  base: '/cxyw',
+
   resolve: {
     alias: {
       '@': resolve('src'),
-    }
+    },
+
   },
 
 })
