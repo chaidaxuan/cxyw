@@ -13,7 +13,7 @@ export default defineConfig({
     vueJsx(),
     vueDevTools(),
   ],
-  base: '/cxyw',
+  base: '/cxyw/',
 
   resolve: {
     alias: {
