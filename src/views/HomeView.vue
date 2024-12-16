@@ -61,7 +61,7 @@
       </div>
     </div>
   </div>
-  <div>
+  <div style="margin-top: 5px; border: 1px 0px 1px 0px; border-color: aliceblue">
     <el-row class="tac">
       <el-col :span="6">
         <el-menu
