@@ -119,8 +119,6 @@
 import { ref } from 'vue'
 import { ElMenu, ElMenuItem } from 'element-plus'
 
-import { Document, Menu as IconMenu, Location, Setting } from '@element-plus/icons-vue'
-
 export default {
   components: {
     ElMenu,
