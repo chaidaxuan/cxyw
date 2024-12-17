@@ -20,6 +20,9 @@
   --w-e-textarea-selected-border-color: var(--el-color-primary)
 }
 
+:root {
+  --el-color-primary: green;
+}
 .des_des_color .el-divider--vertical {
   height: 12px
 }
