@@ -1,3 +1,5 @@
+<!-- eslint-disable @typescript-eslint/no-unused-vars -->
+<!-- eslint-disable @typescript-eslint/no-unused-vars -->
 <template>
   <div class="header-top">
     <div
@@ -199,50 +201,26 @@
                         <span class="text-star">*</span><span>尺寸</span><span>：</span>
                       </div>
                     </div>
+
                     <div class="el-col el-col-21">
                       <div class="mb7px inline-block">
-                        <div class="el-select el-select--default" style="width: 240px">
-                          <div
-                            class="el-select__wrapper is-filterable el-tooltip__trigger el-tooltip__trigger"
-                            tabindex="-1"
+                        <div class="flex flex-wrap gap-4 items-center">
+                          <el-select
+                            placeholder="Select"
+                            size="large"
+                            style="width: 240px"
+                            v-model="selectedValue"
+                            @change="handleSelectChange"
                           >
-                            <!--v-if-->
-                            <div class="el-select__selection">
-                              <!--v-if-->
-                              <div class="el-select__selected-item el-select__input-wrapper">
-                                <input
-                                  type="text"
-                                  class="el-select__input is-default"
-                                  autocomplete="off"
-                                  role="combobox"
-                                  spellcheck="false"
-                                  aria-activedescendant=""
-                                  aria-controls="el-id-8020-17"
-                                  aria-expanded="false"
-                                  aria-autocomplete="none"
-                                  aria-haspopup="listbox"
-                                  id="el-id-8020-53"
-                                  style="width: 11px"
-                                /><span
-                                  aria-hidden="true"
-                                  class="el-select__input-calculator"
-                                ></span>
-                              </div>
-                              <div class="el-select__selected-item el-select__placeholder">
-                                <span>大16开210*285</span>
-                              </div>
-                            </div>
-                            <div class="el-select__suffix">
-                              <i class="el-icon el-select__caret el-select__icon"
-                                ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
-                                  <path
-                                    fill="currentColor"
-                                    d="M831.872 340.864 512 652.672 192.128 340.864a30.592 30.592 0 0 0-42.752 0 29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728 30.592 30.592 0 0 0-42.752 0z"
-                                  ></path></svg></i
-                              ><!--v-if--><!--v-if-->
-                            </div>
-                          </div>
+                            <el-option
+                              v-for="item in options"
+                              :key="item.value"
+                              :label="item.label"
+                              :value="item.value"
+                            />
+                          </el-select>
                         </div>
+
                         <div class="formatInput formatInput" style="display: none">
                           <div style="display: inline-block">
                             长边&nbsp;
@@ -1430,8 +1408,8 @@
                     class="el-col el-col-21"
                     style="margin-top: 7px; font-weight: bold; min-height: 36px"
                   >
-                    <span data-v-1745df91="" class="price text-price"
-                      ><span data-v-1745df91="" class="money-text">599</span></span
+                    <span data-v-1745df91="" class="price text-price">
+                      <span data-v-1745df91="" class="money-text">{{ size }}</span></span
                     >
                     元
                     <!----><!----><!----><!----><button
@@ -1460,8 +1438,10 @@
                   >
                     <div data-v-1745df91="" class="memo-class">
                       <span data-v-1745df91=""
-                        >无碳联单（黑白）-木浆纸-大16开210X285-二联-白红-每本张数100-单面单黑边联相同-左边刷胶-无皮-200本-预估重量62.5kg-预估出货日期(2024-12-19)</span
-                      ><span data-v-1745df91="">-599元</span
+                        >无碳联单（黑白）-木浆纸-{{
+                          size
+                        }}-二联-白红-每本张数100-单面单黑边联相同-左边刷胶-无皮-200本-预估重量62.5kg-预估出货日期(2024-12-19)</span
+                      ><span data-v-1745df91="">-{{ size }}元</span
                       ><!----><button
                         data-v-1745df91=""
                         aria-disabled="false"
@@ -1493,20 +1473,95 @@
 import { ref } from 'vue'
 import { ElMenu, ElMenuItem } from 'element-plus'
 import './Home.css'
+
 export default {
   components: {
     ElMenu,
     ElMenuItem,
   },
+  data() {
+    return {
+      list: [1, 2, 3],
+
+      options: [
+        {
+          value: '1',
+          label: '大16开210*285',
+        },
+        {
+          value: '2',
+          label: '大32开210*140',
+          disabled: true,
+        },
+        {
+          value: '3',
+          label: '大32开210*145',
+        },
+        {
+          value: '4',
+          label: '正16开185*260',
+        },
+        {
+          value: '5',
+          label: '正32开130*185',
+        },
+        {
+          value: '6',
+          label: '正32开130*190',
+        },
+        {
+          value: '7',
+          label: '大48开210*95',
+        },
+        {
+          value: '8',
+          label: '正48开180*85',
+        },
+        {
+          value: '9',
+          label: '正32开130*190',
+        },
+        {
+          value: '10',
+          label: '正32开130*190',
+        },
+        {
+          value: '11',
+          label: '正32开130*190',
+        },
+        {
+          value: '12',
+          label: '正32开130*190',
+        },
+        {
+          value: '13',
+          label: '正32开130*190',
+        },
+      ],
+    }
+  },
   setup() {
     const activeIndex = ref('1')
+    const size = ref('')
+
     const handleSelect = (key: unknown) => {
       console.log('选中的菜单项索引:', key)
       // 在这里可以根据索引进行路由跳转等操作
     }
+    const selectedValue = ref('')
+    const handleSelectChange = () => {
+      console.log('选项被选中，选中的值为:', selectedValue.value)
+      // 这里可以添加你想要执行的逻辑，比如记录选中时间
+      const selectedTime = new Date()
+      size.value = selectedValue.value
+      console.log('选中时间:', selectedTime)
+    }
     return {
       activeIndex,
       handleSelect,
+      handleSelectChange,
+      selectedValue,
+      size,
     }
   },
 
