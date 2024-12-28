@@ -61,56 +61,60 @@
       </div>
     </div>
   </div>
-  <div style="margin-top: 5px; border: 1px 0px 1px 0px; border-color: aliceblue">
+  <div style="margin-top: 5px; margin-left: 10px; border: 1px 0px 1px 0px; border-color: aliceblue">
     <el-row class="tac">
       <el-col :span="6">
-        <el-menu default-active="2" class="el-menu-vertical-demo">
-          <el-sub-menu index="1">
-            <template #title>
-              <el-icon><location /></el-icon>
-              <span style="margin-left: -30px; font-weight: 500; font-size: 16px; font-weight: bold"
-                >运输票/门票/水票/代金券类</span
-              >
-            </template>
+        <div class="menu-wrap">
+          <el-menu default-active="2" class="el-menu-vertical-demo">
+            <el-sub-menu index="1">
+              <template #title>
+                <el-icon></el-icon>
+                <span
+                  style="margin-left: -30px; font-weight: 500; font-size: 16px; font-weight: bold"
+                  >运输票/门票/水票/代金券类</span
+                >
+              </template>
 
-            <el-menu-item-group>
-              <el-menu-item index="1-1">运输票/门票/水票/代金券</el-menu-item>
-            </el-menu-item-group>
-          </el-sub-menu>
+              <el-menu-item-group>
+                <el-menu-item index="1-1">运输票/门票/水票/代金券</el-menu-item>
+              </el-menu-item-group>
+            </el-sub-menu>
 
-          <el-sub-menu index="2">
-            <template #title>
-              <el-icon><location /></el-icon>
-              <span style="margin-left: -30px; font-weight: 500; font-size: 16px; font-weight: bold"
-                >联单/稿纸/牛皮纸/喷墨类</span
-              >
-            </template>
-            <el-menu-item-group>
-              <el-menu-item index="2-1">无碳联单（黑白）</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group>
-              <el-menu-item index="2-2">喷墨彩色联单（可变数据） </el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group>
-              <el-menu-item index="2-3">胶印彩色联单</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group>
-              <el-menu-item index="2-4">红头/牛皮纸脚垫（默认切单页）</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group>
-              <el-menu-item index="2-5">双胶纸/稿纸/便签本</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group>
-              <el-menu-item index="2-6">喷墨单张（培训资料、试卷）</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group>
-              <el-menu-item index="2-7">电梯保养本专区</el-menu-item>
-            </el-menu-item-group>
-            <el-menu-item-group>
-              <el-menu-item index="2-8">机打联单</el-menu-item>
-            </el-menu-item-group>
-          </el-sub-menu>
-        </el-menu>
+            <el-sub-menu index="2">
+              <template #title>
+                <el-icon></el-icon>
+                <span
+                  style="margin-left: -30px; font-weight: 500; font-size: 16px; font-weight: bold"
+                  >联单/稿纸/牛皮纸/喷墨类</span
+                >
+              </template>
+              <el-menu-item-group>
+                <el-menu-item index="2-1">无碳联单（黑白）</el-menu-item>
+              </el-menu-item-group>
+              <el-menu-item-group>
+                <el-menu-item index="2-2">喷墨彩色联单（可变数据） </el-menu-item>
+              </el-menu-item-group>
+              <el-menu-item-group>
+                <el-menu-item index="2-3">胶印彩色联单</el-menu-item>
+              </el-menu-item-group>
+              <el-menu-item-group>
+                <el-menu-item index="2-4">红头/牛皮纸脚垫（默认切单页）</el-menu-item>
+              </el-menu-item-group>
+              <el-menu-item-group>
+                <el-menu-item index="2-5">双胶纸/稿纸/便签本</el-menu-item>
+              </el-menu-item-group>
+              <el-menu-item-group>
+                <el-menu-item index="2-6">喷墨单张（培训资料、试卷）</el-menu-item>
+              </el-menu-item-group>
+              <el-menu-item-group>
+                <el-menu-item index="2-7">电梯保养本专区</el-menu-item>
+              </el-menu-item-group>
+              <el-menu-item-group>
+                <el-menu-item index="2-8">机打联单</el-menu-item>
+              </el-menu-item-group>
+            </el-sub-menu>
+          </el-menu>
+        </div>
       </el-col>
       <el-col :span="18">
         <div class="order-wrap">
@@ -203,11 +207,11 @@
                     </div>
 
                     <div class="el-col el-col-21">
-                      <div class="mb7px inline-block">
+                      <div class="mb7px inline-block" style="display: flex">
                         <div class="flex flex-wrap gap-4 items-center">
                           <el-select
-                            placeholder="Select"
-                            size="large"
+                            placeholder="选择"
+                            size="default"
                             style="width: 240px"
                             v-model="selectedValue"
                             @change="handleSelectChange"
@@ -219,68 +223,6 @@
                               :value="item.value"
                             />
                           </el-select>
-                        </div>
-
-                        <div class="formatInput formatInput" style="display: none">
-                          <div style="display: inline-block">
-                            长边&nbsp;
-                            <div style="display: inline-block">
-                              <div
-                                class="el-input-number el-input-number--small is-without-controls"
-                                style="width: 80px !important"
-                              >
-                                <!--v-if--><!--v-if-->
-                                <div class="el-input el-input--small">
-                                  <!-- input --><!-- prepend slot --><!--v-if-->
-                                  <div class="el-input__wrapper" tabindex="-1">
-                                    <!-- prefix slot --><!--v-if--><input
-                                      class="el-input__inner"
-                                      step="1"
-                                      max="Infinity"
-                                      min="-Infinity"
-                                      type="number"
-                                      autocomplete="off"
-                                      tabindex="0"
-                                      role="spinbutton"
-                                      aria-valuenow=""
-                                      aria-disabled="false"
-                                      id="el-id-8020-54"
-                                    /><!-- suffix slot --><!--v-if-->
-                                  </div>
-                                  <!-- append slot --><!--v-if-->
-                                </div>
-                              </div>
-                              <!---->
-                            </div>
-                            <span>&nbsp;*短边&nbsp;</span>
-                            <div
-                              class="el-input-number el-input-number--small is-without-controls"
-                              style="width: 80px !important"
-                            >
-                              <!--v-if--><!--v-if-->
-                              <div class="el-input el-input--small">
-                                <!-- input --><!-- prepend slot --><!--v-if-->
-                                <div class="el-input__wrapper" tabindex="-1">
-                                  <!-- prefix slot --><!--v-if--><input
-                                    class="el-input__inner"
-                                    step="1"
-                                    max="Infinity"
-                                    min="-Infinity"
-                                    type="number"
-                                    autocomplete="off"
-                                    tabindex="0"
-                                    role="spinbutton"
-                                    aria-valuenow=""
-                                    aria-disabled="false"
-                                    id="el-id-8020-55"
-                                  /><!-- suffix slot --><!--v-if-->
-                                </div>
-                                <!-- append slot --><!--v-if-->
-                              </div>
-                            </div>
-                            <span>&nbsp;mm&nbsp;</span
-                            ><!----><!---->
-                          </div>
                         </div>
                         <div class="ml7px inline-block align-middle">
                           <label class="el-checkbox el-checkbox--large"
@@ -307,81 +249,13 @@
                       </div>
                     </div>
                     <div class="el-col el-col-21">
-                      <div class="order-con">
-                        <div style="position: relative; display: inline-block">
-                          <button
-                            aria-disabled="false"
-                            type="button"
-                            class="el-button el-button--primary el-button--default"
-                          >
-                            <!--v-if--><span class=""
-                              >二联
-                              <span class="end-close" style="display: none"
-                                ><svg viewBox="0 0 1024 1024" width="1.2em" height="1.2em">
-                                  <path
-                                    fill="currentColor"
-                                    d="M764.288 214.592L512 466.88L259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512L214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"
-                                  ></path></svg></span
-                            ></span></button
-                          ><!----><!---->
-                        </div>
-                      </div>
-                      <div class="order-con">
-                        <div style="position: relative; display: inline-block">
-                          <button
-                            aria-disabled="false"
-                            type="button"
-                            class="el-button el-button--default el-button--default"
-                          >
-                            <!--v-if--><span class=""
-                              >三联
-                              <span class="end-close" style="display: none"
-                                ><svg viewBox="0 0 1024 1024" width="1.2em" height="1.2em">
-                                  <path
-                                    fill="currentColor"
-                                    d="M764.288 214.592L512 466.88L259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512L214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"
-                                  ></path></svg></span
-                            ></span></button
-                          ><!----><!---->
-                        </div>
-                      </div>
-                      <div class="order-con">
-                        <div style="position: relative; display: inline-block">
-                          <button
-                            aria-disabled="false"
-                            type="button"
-                            class="el-button el-button--default el-button--default"
-                          >
-                            <!--v-if--><span class=""
-                              >四联
-                              <span class="end-close" style="display: none"
-                                ><svg viewBox="0 0 1024 1024" width="1.2em" height="1.2em">
-                                  <path
-                                    fill="currentColor"
-                                    d="M764.288 214.592L512 466.88L259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512L214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"
-                                  ></path></svg></span
-                            ></span></button
-                          ><!----><!---->
-                        </div>
-                      </div>
-                      <div class="order-con">
-                        <div style="position: relative; display: inline-block">
-                          <button
-                            aria-disabled="false"
-                            type="button"
-                            class="el-button el-button--default el-button--default"
-                          >
-                            <!--v-if--><span class=""
-                              >五联
-                              <span class="end-close" style="display: none"
-                                ><svg viewBox="0 0 1024 1024" width="1.2em" height="1.2em">
-                                  <path
-                                    fill="currentColor"
-                                    d="M764.288 214.592L512 466.88L259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512L214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"
-                                  ></path></svg></span
-                            ></span></button
-                          ><!----><!---->
-                        </div>
+                      <div>
+                        <el-radio-group v-model="radio2" size="large">
+                          <el-radio-button label="二联" value="2" />
+                          <el-radio-button label="三联" value="3" />
+                          <el-radio-button label="四联" value="4" />
+                          <el-radio-button label="五联" value="5" />
+                        </el-radio-group>
                       </div>
                     </div>
                   </div>
@@ -423,7 +297,15 @@
                                 ></span>
                               </div>
                               <div class="el-select__selected-item el-select__placeholder">
-                                <span>白红</span>
+                                <span>{{
+                                  radio2 == '2'
+                                    ? '白红'
+                                    : radio2 == '3'
+                                    ? '白红黄'
+                                    : radio2 == '4'
+                                    ? '白红黄蓝'
+                                    : '白红黄蓝绿'
+                                }}</span>
                               </div>
                             </div>
                             <div class="el-select__suffix">
@@ -1482,7 +1364,7 @@ export default {
   data() {
     return {
       list: [1, 2, 3],
-
+      radio2: '3',
       options: [
         {
           value: '1',

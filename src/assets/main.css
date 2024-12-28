@@ -21,7 +21,7 @@
 }
 
 :root {
-  --el-color-primary: green;
+  --el-color-primary: green!important;
 }
 .des_des_color .el-divider--vertical {
   height: 12px
@@ -34,6 +34,17 @@
   margin: auto;
   display: inline-block
 }
+.inline-block {
+    display: inline-block;
+}
+.mb7px {
+  margin-bottom: 7px;
+}
+
+.ml7px {
+  margin-left: 7px;
+}
+
 
 .product-container {
   column-count: 2;

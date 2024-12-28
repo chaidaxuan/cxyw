@@ -1,4 +1,10 @@
+.menu-wrap {
+  border-top: 1px solid #dcdfe6;
+  border-left: 1px solid #dcdfe6;
+  border-bottom: #dcdfe6 1px solid;
 
+  margin-top: 5px;
+}
 .order-wrap {
   height: auto;
   margin: 5px 10px 0px 10px;
