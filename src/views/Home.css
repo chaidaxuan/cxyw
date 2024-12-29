@@ -8,6 +8,7 @@
 .order-wrap {
   height: auto;
   margin: 5px 10px 0px 10px;
+  display: flex;
 }
 
 .image-viewer {
@@ -69,7 +70,7 @@
 }
 
 .qute-fixed {
-  position: absolute;
+margin-left: 5px;
   top: 48px;
   right: -335px;
   background: #fff;
