@@ -10,16 +10,15 @@
         style="margin: 10px 50px 10px 50px; display: flex; justify-content: space-between"
         class="header-logo"
       >
-        <a data-v-51044509="" href="/" class=""
-          ><a data-v-51044509="" href="javascript;"
-            ><img
-              data-v-51044509=""
-              src="@/assets/logo.jpg"
-              height="58"
-              width="58"
-              alt="彩旋印刷"
-              title="首页" /></a
-        ></a>
+        <a data-v-51044509="" href="javascript;"
+          ><img
+            data-v-51044509=""
+            src="@/assets/logo.jpg"
+            height="58"
+            width="58"
+            alt="彩旋印刷"
+            title="首页"
+        /></a>
       </div>
       <div style="padding-top: 10px; width: 605px">
         <div style="float: right">
@@ -828,63 +827,55 @@
                 </div>
               </div>
               <template #footer>
-                <div data-v-1745df91="" class="price-visible">
-                  <div data-v-1745df91="" class="el-row">
-                    <div
-                      data-v-1745df91=""
-                      class="el-col el-col-3"
-                      style="max-width: 120px !important"
-                    >
-                      <div data-v-1745df91="" class="parametername">
-                        <div data-v-1745df91="" class="">
-                          <span data-v-1745df91="" class="text-star">* </span> 数量
-                          <span data-v-1745df91="">(本)</span><span data-v-1745df91="">：</span>
+                <div class="price-visible">
+                  <div class="el-row">
+                    <div class="el-col el-col-3" style="max-width: 120px !important">
+                      <div class="parametername">
+                        <div class="">
+                          <span class="text-star">* </span> 数量 <span>(本)</span><span>：</span>
                         </div>
                         <!----><!---->
                       </div>
                     </div>
-                    <div data-v-1745df91="" class="el-col el-col-21">
-                      <div data-v-1745df91="" class="qty-item">
-                        <span data-v-1745df91="">5</span><b data-v-1745df91="">￥69</b
+                    <div class="el-col el-col-21">
+                      <div class="qty-item">
+                        <span>5</span><b>￥{{ calculatePrice(5) }}</b
                         ><!---->
                       </div>
-                      <div data-v-1745df91="" class="qty-item">
-                        <span data-v-1745df91="">10</span><b data-v-1745df91="">￥69</b
+                      <div class="qty-item">
+                        <span>10</span><b>￥{{ calculatePrice(6) }}</b
                         ><!---->
                       </div>
-                      <div data-v-1745df91="" class="qty-item">
-                        <span data-v-1745df91="">20</span><b data-v-1745df91="">￥87</b
+                      <div class="qty-item">
+                        <span>20</span><b>￥{{ calculatePrice(20) }}</b
                         ><!---->
                       </div>
-                      <div data-v-1745df91="" class="qty-item">
-                        <span data-v-1745df91="">50</span><b data-v-1745df91="">￥168</b
+                      <div class="qty-item">
+                        <span>50</span><b>￥{{ calculatePrice(50) }}</b
                         ><!---->
                       </div>
-                      <div data-v-1745df91="" class="qty-item">
-                        <span data-v-1745df91="">52</span><b data-v-1745df91="">￥175</b
+                      <div class="qty-item">
+                        <span>52</span><b>￥{{ calculatePrice(52) }}</b
                         ><!---->
                       </div>
-                      <div data-v-1745df91="" class="qty-item">
-                        <span data-v-1745df91="">100</span><b data-v-1745df91="">￥302</b
+                      <div class="qty-item">
+                        <span>100</span><b>￥{{ calculatePrice(100) }}</b
                         ><!---->
                       </div>
-                      <div data-v-1745df91="" class="qty-item">
-                        <span data-v-1745df91="">102</span><b data-v-1745df91="">￥308</b
+                      <div class="qty-item">
+                        <span>102</span><b>￥{{ calculatePrice(102) }}</b
                         ><!---->
                       </div>
-                      <div data-v-1745df91="" class="qty-item">
-                        <span data-v-1745df91="">104</span><b data-v-1745df91="">￥314</b
+                      <div class="qty-item">
+                        <span>104</span><b>￥{{ calculatePrice(104) }}</b
                         ><!---->
                       </div>
-                      <div data-v-1745df91="" class="qty-active qty-item">
-                        <span data-v-1745df91="">200</span><b data-v-1745df91="">￥599</b
+                      <div class="qty-active qty-item">
+                        <span>200</span><b>￥{{ calculatePrice(200) }}</b
                         ><!---->
                       </div>
-                      <span data-v-1745df91="" style="font-size: 13px; margin-right: 5px"
-                        >自定义:</span
-                      >
+                      <span style="font-size: 13px; margin-right: 5px">自定义:</span>
                       <div
-                        data-v-1745df91=""
                         class="el-input-number el-input-number--default is-without-controls"
                         style="width: 85px; margin-right: 7px"
                       >
@@ -910,7 +901,6 @@
                         </div>
                       </div>
                       <button
-                        data-v-1745df91=""
                         aria-disabled="false"
                         type="button"
                         class="el-button el-button--warning el-button--default"
@@ -918,26 +908,20 @@
                         <!--v-if--><span class="">计算价格</span></button
                       ><!---->
                     </div>
-                    <div
-                      data-v-1745df91=""
-                      class="el-col el-col-3"
-                      style="max-width: 120px !important"
-                    >
-                      <li data-v-1745df91="" class="parametername" style="margin-top: 7px">
-                        <span data-v-1745df91="">价格</span><span data-v-1745df91="">：</span>
+                    <div class="el-col el-col-3" style="max-width: 120px !important">
+                      <li class="parametername" style="margin-top: 7px">
+                        <span>价格</span><span>：</span>
                       </li>
                     </div>
                     <div
-                      data-v-1745df91=""
                       class="el-col el-col-21"
                       style="margin-top: 7px; font-weight: bold; min-height: 36px"
                     >
-                      <span data-v-1745df91="" class="price text-price">
-                        <span data-v-1745df91="" class="money-text">{{ quantity }}</span></span
+                      <span class="price text-price">
+                        <span class="money-text">￥{{ calculatePrice(quantity) }}</span></span
                       >
                       元
                       <!----><!----><!----><!----><button
-                        data-v-1745df91=""
                         aria-disabled="false"
                         type="button"
                         class="el-button el-button--success el-button--default"
@@ -946,35 +930,25 @@
                         <!--v-if--><span class="">上传文件</span>
                       </button>
                     </div>
-                    <div
-                      data-v-1745df91=""
-                      class="el-col el-col-3"
-                      style="max-width: 120px !important"
-                    >
-                      <li data-v-1745df91="" class="parametername" style="margin-top: 7px">
-                        <span data-v-1745df91="">报价明细</span><span data-v-1745df91="">：</span>
+                    <div class="el-col el-col-3" style="max-width: 120px !important">
+                      <li class="parametername" style="margin-top: 7px">
+                        <span>报价明细</span><span>：</span>
                       </li>
                     </div>
-                    <div
-                      data-v-1745df91=""
-                      class="el-col el-col-21"
-                      style="margin-top: 7px; min-height: 29px"
-                    >
-                      <div data-v-1745df91="" class="memo-class">
-                        <span data-v-1745df91=""
+                    <div class="el-col el-col-21" style="margin-top: 7px; min-height: 29px">
+                      <div class="memo-class">
+                        <span
                           >无碳联单（黑白）-木浆纸-{{
                             size
                           }}-二联-白红-每本张数100-单面单黑边联相同-左边刷胶-无皮-200本-预估重量62.5kg-预估出货日期(2024-12-19)</span
-                        ><span data-v-1745df91="">-{{ size }}元</span
+                        ><span>-{{ size }}元</span
                         ><!----><button
-                          data-v-1745df91=""
                           aria-disabled="false"
                           type="button"
                           class="el-button el-button--primary el-button--small is-link"
                         >
                           <!--v-if--><span class="">复制报价总结</span></button
                         ><button
-                          data-v-1745df91=""
                           aria-disabled="false"
                           type="button"
                           class="el-button el-button--primary el-button--small is-link"
@@ -1098,7 +1072,7 @@
   </div>
 </template>
 <script lang="ts">
-import { computed, ref } from 'vue'
+import { ref } from 'vue'
 import { ElMenu, ElMenuItem } from 'element-plus'
 import './Home.css'
 
@@ -1175,7 +1149,6 @@ export default {
   setup() {
     const activeIndex = ref('1')
     const size = ref('')
-
     const handleSelect = (key: unknown) => {
       console.log('选中的菜单项索引:', key)
       // 在这里可以根据索引进行路由跳转等操作
@@ -1198,6 +1171,23 @@ export default {
       selectedValue,
       size,
     }
+  },
+  methods: {
+    calculatePrice(x: number) {
+      if (x > 0 && x <= 10) {
+        return 69
+      } else if (x > 10 && x <= 20) {
+        return 41 + 2.8 * x
+      } else if (x > 20 && x <= 50) {
+        return 49.6 + 2.37 * x
+      } else if (x > 50 && x <= 100) {
+        return 24 + 2.88 * x
+      } else if (x > 100 && x <= 200) {
+        return 5 + 3.07 * x
+      } else if (x > 200) {
+        return 3 * x
+      }
+    },
   },
 
   handleOpen(key: string, keyPath: string[]) {
